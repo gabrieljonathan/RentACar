@@ -14,7 +14,7 @@ import java.util.Map;
  * 
  * @author apont
  */
-public interface CarInterface Pedro {
+public interface CarInterface Pedro{
     
     /**
      * This method in in charge of creating the calendar of availability 
@@ -24,14 +24,18 @@ public interface CarInterface Pedro {
      * 
      * @return Map of availability
      */
-    public Map<Month, boolean[]> createAvailability();
+    public Map<Month, boolean[]> createAvailability(); {
     
     /**
      * Getter method for the make of this car.
      * 
      * @return the make of the car
+     * 
      */
-    public Make getMake();
+}
+    public Make getMake(); {
+return Make;
+}
     
     /**
      * Sets the make of the car.
