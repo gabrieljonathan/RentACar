@@ -14,7 +14,11 @@ import java.util.Map;
  * 
  * @author apont
  */
-public interface CarInterface Pedro{
+public interface CarInterface {
+    //Initializing variables
+    public Make make;
+    private Map<Month,boolean[]> map;
+    
     
     /**
      * This method in in charge of creating the calendar of availability 
@@ -34,8 +38,8 @@ public interface CarInterface Pedro{
      */
 }
     public Make getMake(); {
-return Make;
-}
+    return make;
+
     
     /**
      * Sets the make of the car.
@@ -43,21 +47,21 @@ return Make;
      * @param make 
      */
     public void setMake(Make make);
-    
+    this.make=make; 
     /**
      * Getter method for the rate of this car.
      * 
      * @return rate of the car.
      */
     public double getRate();
-    
+    return Rate;
     /**
      * Sets the rate of the car.
      * 
      * @param rate 
      */
     public void setRate(double rate);
-    
+    this.rate=rate;
     /**
      * Getter method for the availability calendar of this car.
      * 
@@ -65,7 +69,7 @@ return Make;
      */
     public Map<Month, boolean[]> getAvailability();
     
-    
+    return map;
     /**
      * Sets the availability calendar of the car.
      * 
