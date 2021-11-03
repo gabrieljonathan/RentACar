@@ -8,7 +8,6 @@ package ooc.yoursolution;
 import ooc.enums.Make;
 import ooc.enums.Month;
 import java.util.Map;
-import java.util.HashMap;
 
 /**
  * This is one of the interfaces you need to implement
@@ -16,19 +15,8 @@ import java.util.HashMap;
  * @author apont
  */
 public interface CarInterface {
-    //Initializing variables
-    private Make make;
-    private Map<Month,boolean[]> map;
-    private double rate;
-    private int id;
-    
-    //creating variable to create a car
-    public car (Make make, double rate, int id) 
-    this.id=id;
-    this.make=make;
-    this.rate;
-    
-}
+    //Initializing variables 
+
     /**
      * This method in in charge of creating the calendar of availability 
      * of the car for the whole year. 
@@ -37,7 +25,7 @@ public interface CarInterface {
      * 
      * @return Map of availability
      */
-    public Map<Month, boolean[]> createAvailability(); {
+    public Map<Month, boolean[]> createAvailability(); 
     
     /**
      * Getter method for the make of this car.
@@ -45,49 +33,40 @@ public interface CarInterface {
      * @return the make of the car
      * 
      */
-}
-    public Make getMake(); {
-    return make;
-}
+
+    public Make getMake(); 
     /**
      * Sets the make of the car.
      * 
      * @param make 
      */
-    public void setMake(Make make); {
-    this.make=make; 
-}
+    public void setMake(Make make); 
     /**
      * Getter method for the rate of this car.
      * @return rate of the car.
      * returning the rate
      */
-    public double getRate(); {
-    return rate;
-}
+    public double getRate(); 
     /**
      * Sets the rate of the car.
      * @param rate 
      * setter for setting the rate
      */
-    public void setRate(double rate); {
-    this.rate=rate;
-}
+    public void setRate(double rate); 
+
     /**
      * Getter method for the availability calendar of this car.
      * @return Map of availability
      * returning map
      */
-    public Map<Month, boolean[]> getAvailability(); {
-    return map;
-}
+    public Map<Month, boolean[]> getAvailability(); 
     /**
      * Sets the availability calendar of the car.
      * 
      * @param availability 
      */
     public void setAvailability(Map<Month, boolean[]> availability);
-    this.map=map;
+    
     /**
      * Getter method for the id of this car.
      * 
