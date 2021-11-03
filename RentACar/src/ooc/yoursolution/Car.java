@@ -44,7 +44,7 @@ public class Car implements CarInterface {
     
     @Override
     public Map createAvailability() {
-        map = new HasMap<>();
+        map = new HashMap<>();
         
         map.put(Month.JANUARY, new Boolean[31]);
         map.put(Month.FEBRUARY, new Boolean[28]);
@@ -62,7 +62,8 @@ public class Car implements CarInterface {
         return map;
     }
     //get and set for make
-    public Make getmake(){
+    @Override
+    public Make getMake(){
         return make;
     }
 
