@@ -8,6 +8,7 @@ package ooc.yoursolution;
 import ooc.enums.Make;
 import ooc.enums.Month;
 import java.util.Map;
+import java.util.HashMap;
 
 /**
  * This is one of the interfaces you need to implement
@@ -16,10 +17,18 @@ import java.util.Map;
  */
 public interface CarInterface {
     //Initializing variables
-    public Make make;
+    private Make make;
     private Map<Month,boolean[]> map;
+    private double rate;
+    private int id;
     
+    //creating variable to create a car
+    public car (Make make, double rate, int id) 
+    this.id=id;
+    this.make=make;
+    this.rate;
     
+}
     /**
      * This method in in charge of creating the calendar of availability 
      * of the car for the whole year. 
@@ -39,44 +48,46 @@ public interface CarInterface {
 }
     public Make getMake(); {
     return make;
-
-    
+}
     /**
      * Sets the make of the car.
      * 
      * @param make 
      */
-    public void setMake(Make make);
+    public void setMake(Make make); {
     this.make=make; 
+}
     /**
      * Getter method for the rate of this car.
-     * 
      * @return rate of the car.
+     * returning the rate
      */
-    public double getRate();
-    return Rate;
+    public double getRate(); {
+    return rate;
+}
     /**
      * Sets the rate of the car.
-     * 
      * @param rate 
+     * setter for setting the rate
      */
-    public void setRate(double rate);
+    public void setRate(double rate); {
     this.rate=rate;
+}
     /**
      * Getter method for the availability calendar of this car.
-     * 
      * @return Map of availability
+     * returning map
      */
-    public Map<Month, boolean[]> getAvailability();
-    
+    public Map<Month, boolean[]> getAvailability(); {
     return map;
+}
     /**
      * Sets the availability calendar of the car.
      * 
      * @param availability 
      */
     public void setAvailability(Map<Month, boolean[]> availability);
-    
+    this.map=map;
     /**
      * Getter method for the id of this car.
      * 
