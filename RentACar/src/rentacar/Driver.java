@@ -23,7 +23,6 @@ import java.io.IOException;
 //Gabriel Jonathan 2020362
 //Pedro Henrique Simoes Marcal 2020300
 
-
 /**
  *
  * @author apont
@@ -42,28 +41,29 @@ public class Driver {
         String file = "amilcar_rentals.txt";
         BufferedReader in = new BufferedReader(new FileReader(file));
 
-        RentACarInterface rentACar = bookingSystem.setupRentACar(in);
+        RentACarInterface rentCar = bookingSystem.setupRentACar(in);
 
         // Get the name of the car rental
-        System.out.println(rentACar.getName());
+        System.out.println("The name of the Car Retal: " + rentCar.getName());
         
         // Print the number of cars in the rent-a-car
-        System.out.println(rentACar.getNumberOfCars());  
+        System.out.println("\nQuantity of cars: " + rentCar.getNumberOfCars());  
         
         // Check if there is a BMW car available for 5 days from the 1st
         // of January
-        System.out.println(rentACar.checkAvailability(Month.JANUARY, 1, Make.BMW, 5)); 
+        System.out.println("\nChecking BMW Avaiability: " + rentCar.checkAvailability(Month.JANUARY, 1, Make.BMW, 5)); 
         
         // Get the id of the car available
-        System.out.println(rentACar.getCarAvailable(Month.JANUARY, 1, Make.BMW, 5));
+        System.out.println("\nChecking BMW ID:" + rentCar.getCarAvailable(Month.JANUARY, 1, Make.BMW, 5));
         
+        System.out.println("\nChecking Avaiability for dates:");
         // Try some bookings
-        System.out.println(rentACar.bookCar(Month.JANUARY, 1, Make.BMW, 5));
-        System.out.println(rentACar.bookCar(Month.JANUARY, 1, Make.BMW, 5));
-        System.out.println(rentACar.bookCar(Month.JANUARY, 1, Make.BMW, 5));
-        System.out.println(rentACar.bookCar(Month.JANUARY, 1, Make.BMW, 5));
-        System.out.println(rentACar.bookCar(Month.FEBRUARY, 3, Make.FIAT, 10));
-        System.out.println(rentACar.bookCar(Month.MARCH, 10, Make.FORD, 12));
+        System.out.println(rentCar.bookCar(Month.JANUARY, 1, Make.BMW, 5));
+        System.out.println(rentCar.bookCar(Month.JANUARY, 1, Make.BMW, 5));
+        System.out.println(rentCar.bookCar(Month.JANUARY, 1, Make.BMW, 5));
+        System.out.println(rentCar.bookCar(Month.JANUARY, 1, Make.BMW, 5));
+        System.out.println(rentCar.bookCar(Month.FEBRUARY, 3, Make.FIAT, 10));
+        System.out.println(rentCar.bookCar(Month.MARCH, 10, Make.FORD, 12));
         
     }
 
