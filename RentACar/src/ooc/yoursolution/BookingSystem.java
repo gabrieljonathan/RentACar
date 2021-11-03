@@ -34,7 +34,7 @@ public class BookingSystem  implements BookingSystemInterface {
                         cars.add(car);
                     }
                 }
-                RentACarInterface rentACarInterface = new RentACar(cars,name);
+                RentACarInterface rentACarInterface = new RentCar(cars,name);
                 return rentACarInterface;
     }
     
