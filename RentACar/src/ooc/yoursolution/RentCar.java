@@ -112,7 +112,7 @@ public class RentCar implements RentACarInterface {
     @Override
     public boolean bookCar(Month month, int day, Make make, int lengthOfRent) {
         
-        if (!checkAvailability(month,day,make,lengthOfRent)); {
+        if (!checkAvailability(month,day,make,lengthOfRent)) {
         return false;
     }
     
