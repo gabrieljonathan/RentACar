@@ -14,7 +14,7 @@ import ooc.enums.Make;
 
 /**
  *
- * @author Gabriel
+ * @author Gabriel 2020362
  */
 public class Car implements CarInterface {
     

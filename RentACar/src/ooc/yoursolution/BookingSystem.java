@@ -12,7 +12,7 @@ import java.util.List;
 import ooc.enums.*;
 /**
  *
- * @author 35389
+ * @author Gabriel 2020362
  */
 public class BookingSystem  implements BookingSystemInterface {
     
