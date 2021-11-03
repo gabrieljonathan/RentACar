@@ -18,6 +18,10 @@ import ooc.enums.Make;
  */
 public class Car implements CarInterface {
     
+    /**
+     * Variables for the car  
+     * boolean map created to define the number of days in the month
+     */
     
     private int id;
     private Make make;
@@ -26,12 +30,18 @@ public class Car implements CarInterface {
     
     public Car (int id, Make make, double rate){
         this.id = id;
-        this.make = make;
         this.rate = rate;
+        this.make = make;
+        
         createAvailability();
     
     }
-
+    
+    /**
+     * including every day of the month
+     * including retuning 
+     */
+    
     @Override
     public Map createAvailability() {
         map = new HasMap<>();
@@ -51,7 +61,7 @@ public class Car implements CarInterface {
 
         return map;
     }
-
+    //get and set for make
     public Make getmake(){
         return make;
     }
@@ -60,7 +70,7 @@ public class Car implements CarInterface {
     public void setMake(Make make) {
         this.make = make;
     }
-
+    //get and set for rate
     @Override
     public double getRate() {
         return rate;
@@ -70,22 +80,26 @@ public class Car implements CarInterface {
     public void setRate(double rate) {
         this.rate = rate;
     }
-
+    //
     @Override
     public Map getAvailability() {
         return map;
     }
-
+    //get and set for availability
     @Override
     public void setAvailability(Map availability) {
         this.map = map;
     }
-
+    //return ID
     @Override
     public int getId() {
         return id;
     }
-
+    
+    /**
+     * passing the parameters and return availability if the answer is "true" 
+     * -1 because it needs to follow the matrix with start 0  
+     */
     @Override
     public boolean isAvailable(Month month, int day) {
         Boolean[] availability = map.get(month);
@@ -95,6 +109,9 @@ public class Car implements CarInterface {
         return availability[day-1];
     }
 
+    
+     //*checking conditions
+     
     @Override
     public boolean book(Month month, int day) {
         if (map.get(month)[day-1]) {
